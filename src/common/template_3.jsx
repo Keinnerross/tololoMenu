@@ -1,46 +1,55 @@
 import PostsByCategory from '../components/postsByCategory';
-import logoPanes from "../assets/resoucers/logo_panes.png";
 import motivoFour from "../assets/resoucers/motiv_4.png";
+import TitleComponent from '../components/titleComponent';
+import patron from "../assets/resoucers/patron.png";
 
 
 
 const TemplateThree = () => {
     return (
         <div className="bg-gray-950 min-h-screen flex justify-center">
-            <div className="md:w-[920px] w-full bg-background px-8  py-8 grid grid-cols-2  ">
+            <div className="md:w-[920px] w-full bg-background md:px-8  md:py-8  px-2 py-8 grid grid-cols-2 bg-cover" style={{ backgroundImage: `url(${patron})` }}>
 
-                <div className="col_1 flex flex-col  p-4 relative">
+                <div className="col_1 flex flex-col  md:p-6 p-2 relative">
+                    <div className='w-[0.5px] h-[98%] absolute top-1/2 right-0 bg-[#cdb0ab] z-10 transform -translate-y-1/2' />
 
-                    <h2 className='text-text text-5xl font-extrabold pt-8 pb-4'>Sándwiches</h2>
+                    <TitleComponent title="Sándwiches" />
+
                     <PostsByCategory categoryId="13" />
-                    <h2 className='text-text text-5xl font-extrabold pt-8 pb-4'>Croissants</h2>
+                    <TitleComponent title="Croissant" />
+
                     <PostsByCategory categoryId="14" />
-                    <h2 className='text-text text-5xl font-extrabold pt-8 pb-4'>Miga</h2>
+                    <TitleComponent title="Miga" />
+
                     <PostsByCategory categoryId="15" />
 
 
                 </div>
 
-                <div className="col_2 flex flex-col  p-6">
+                <div className="col_2 flex flex-col  md:p-6 p-2">
                     <div>
-                        <h2 className='text-text text-6xl font-extrabold pt-4 pb-4'>Lomitos</h2>
+                        <TitleComponent title="Lomitos" />
+
                         <PostsByCategory categoryId="16" />
                     </div>
                     <div>
-                        <h2 className='text-text text-6xl font-extrabold pt-8 '>Pinchos</h2>
-                        <p className='italic text-textAux font-medium text-lg pb-4 leading-[22px]'>Como picoteo o aperitivo, se sugiere para acompañar una copa de espumante Brut o Pisco Sour Tololo</p>
+                        <TitleComponent title="Pinchos" />
+
+                        <p className='italic text-textAux font-medium md:text-lg text-[10px] md:pb-4 pb-2 md:leading-[22px] leading-[12px]  '>Como picoteo o aperitivo, se sugiere para acompañar una copa de espumante Brut o Pisco Sour Tololo</p>
                         <PostsByCategory categoryId="17" />
                     </div>
                     <div>
-                        <h2 className='text-text text-6xl font-extrabold pt-8 pb-4'>Veganos</h2>
+                        <TitleComponent title="Veganos" />
+
                         <PostsByCategory categoryId="18" />
                     </div>
                     <div>
-                        <h2 className='text-text text-6xl font-extrabold pt-8 pb-4'>Pizzas</h2>
+                        <TitleComponent title="Pizzas" />
+
                         <PostsByCategory categoryId="19" />
                     </div>
 
-                    <div className='flex justify-center'>
+                    <div className='flex justify-center md:pt-0 pt-16'>
                         <img src={motivoFour} className='w-[280px]' />
 
                     </div>
